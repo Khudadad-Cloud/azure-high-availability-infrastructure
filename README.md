@@ -60,7 +60,7 @@ The final architecture should reflect the actual resource configuration document
 
 The virtual network provides network isolation and connectivity for supported Azure resources. Subnets help organize resources, while NSGs control permitted inbound and outbound traffic according to configured security rules.
 
-**Evidence:** See `screenshots/01-virtual-networking/`.
+**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/vnet.png.
 
 ### 2. Azure Load Balancer
 
@@ -79,7 +79,7 @@ Azure Load Balancer distributes network traffic across eligible backend instance
 
 This helps improve application availability when the backend architecture and health-check configuration are designed appropriately.
 
-**Evidence:** See `screenshots/02-load-balancer/`.
+**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/loadbalancer.png.
 
 ### 3. Azure Storage Access Management
 
@@ -100,7 +100,7 @@ Following the principle of least privilege helps ensure that identities receive 
 
 Storage authentication, authorization, and network access restrictions are separate controls and should be documented according to the configuration actually implemented.
 
-**Evidence:** See `screenshots/03-storage-security/`.
+**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-09-26%20085753.png.
 
 ### 4. Azure Virtual Machine Scale Sets
 
@@ -119,7 +119,7 @@ Virtual Machine Scale Sets support the deployment and management of groups of vi
 
 Availability zones, autoscaling rules, and load-balancing integration should be documented only when configured and verified.
 
-**Evidence:** See `screenshots/04-virtual-machine-scale-sets/`.
+**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-09-26%20093304.png.
 
 ### 5. Azure Backup
 
@@ -138,7 +138,7 @@ Azure Backup provides data protection for supported Azure workloads. A configure
 
 Successful backup jobs and available recovery points provide evidence that the configured protection workflow is operating as expected.
 
-**Evidence:** See `screenshots/05-azure-backup/`.
+**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-10-07%20081211.png.
 
 ## Architecture Diagrams
 
