@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project brings together five Azure infrastructure implementations into one portfolio project focused on networking, load balancing, scalability, storage security, and backup and recovery.
+This project brings together many important components of Azure infrastructure into one project focused on networking, load balancing, scalability, storage security, and backup and recovery.
 
 The goal was to deploy and configure Azure services that support reliable application connectivity, controlled access to cloud resources, workload scalability, and data protection.
 
