@@ -22,7 +22,7 @@ https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/tree/ma
 
 The following diagram provides a conceptual overview of the solution.
 
-![Azure Infrastructure Architecture](diagrams/azure-architecture.png)
+https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/tree/main/diagrams
 
 The architecture illustrates how users can access an application through a load balancer, how virtual machines operate within a virtual network, and how storage access and backup can be managed through separate Azure services.
 
