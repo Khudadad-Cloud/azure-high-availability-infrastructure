@@ -9,7 +9,6 @@ The goal was to deploy and configure Azure services that support reliable applic
 The project includes Azure Virtual Networking, Azure Load Balancer, Azure Storage access management, Virtual Machine Scale Sets, and Azure Backup.
 
 ## Project Objectives
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/tree/main/diagrams
 
 * Implement Azure virtual networking and subnet configuration.
 * Configure an Azure Load Balancer to distribute traffic across backend resources.
