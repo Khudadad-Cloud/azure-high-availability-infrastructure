@@ -179,13 +179,9 @@ The screenshots and diagrams provide supporting evidence of the implemented conf
 Potential enhancements include:
 
 * Automating infrastructure deployment using Terraform.
-* Documenting repeatable deployment and cleanup procedures.
 * Testing load-balancer health probes and backend failover.
 * Testing autoscaling rules and recording the results.
 * Reviewing storage network restrictions and identity permissions.
 * Performing a test recovery to validate backup recoverability.
-* Documenting estimated costs and resource cleanup procedures.
 
-## Disclaimer
-
-This project is intended for educational and professional portfolio purposes. Resource configurations and screenshots should be reviewed before publication to ensure that no sensitive information is exposed.
+  
