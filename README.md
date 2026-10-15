@@ -143,8 +143,8 @@ Successful backup jobs and available recovery points provide evidence that the c
 ## Architecture Diagrams
 
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/azure-architecture.png.jpg
-* [Network Traffic Flow](diagrams/network-traffic-flow.png)
-* [Storage Security and Backup](diagrams/storage-and-backup.png)
+* https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/network-traffic-flow.png.jpg
+* https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/storage-and-backup.png.jpg
 
 ## Screenshots and Evidence
 
