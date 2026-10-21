@@ -21,8 +21,6 @@ The project includes Azure Virtual Networking, Azure Load Balancer, Azure Storag
 
 The following diagram provides a conceptual overview of the solution.
 
-![Image Error](diagrams/diagram01.png)
-
 The architecture illustrates how users can access an application through a load balancer, how virtual machines operate within a virtual network, and how storage access and backup can be managed through separate Azure services.
 
 The final architecture should reflect the actual resource configuration documented in the screenshots.
@@ -60,8 +58,6 @@ The final architecture should reflect the actual resource configuration document
 
 The virtual network provides network isolation and connectivity for supported Azure resources. Subnets help organize resources, while NSGs control permitted inbound and outbound traffic according to configured security rules.
 
-**Evidence:** ![Image Error](screenshots/vnet.png)
-
 ### 2. Azure Load Balancer
 
 **Objective:** Distribute incoming traffic across configured backend resources.
@@ -78,8 +74,6 @@ The virtual network provides network isolation and connectivity for supported Az
 Azure Load Balancer distributes network traffic across eligible backend instances according to its configured rules and health probes.
 
 This helps improve application availability when the backend architecture and health-check configuration are designed appropriately.
-
-**Evidence:** ![Image Error](screenshots/loadbalancer.png)
 
 ### 3. Azure Storage Access Management
 
@@ -100,7 +94,6 @@ Following the principle of least privilege helps ensure that identities receive 
 
 Storage authentication, authorization, and network access restrictions are separate controls and should be documented according to the configuration actually implemented.
 
-**Evidence:** ![Image Error](screenshots/Screenshot%202026-09-26%20085753.png)
 
 ### 4. Azure Virtual Machine Scale Sets
 
@@ -119,7 +112,6 @@ Virtual Machine Scale Sets support the deployment and management of groups of vi
 
 Availability zones, autoscaling rules, and load-balancing integration should be documented only when configured and verified.
 
-**Evidence:** ![Image Error](screenshots/Screenshot%202026-09-26%20093304.png)
 
 ### 5. Azure Backup
 
@@ -138,13 +130,10 @@ Azure Backup provides data protection for supported Azure workloads. A configure
 
 Successful backup jobs and available recovery points provide evidence that the configured protection workflow is operating as expected.
 
-**Evidence:** ![Image Error](screenshots/Screenshot%202026-10-07%20081211.png)
 
 ## Architecture Diagrams
 
-* ![Image Error](diagrams/azure-architecture.png.jpg)
-* ![Image Error](diagrams/network-traffic-flow.png.jpg)
-* ![Image Error](diagrams/storage-and-backup.png.jpg)
+* ![Image Error](diagrams)
 
 ## Screenshots and Evidence
 
