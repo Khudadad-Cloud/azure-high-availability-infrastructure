@@ -1,0 +1,102 @@
+```hcl
+# Azure Provider
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+  subscription_id = var.subscription_id
+}
+
+# Variables
+variable "subscription_id" {
+  description = "Azure subscription ID"
+  type        = string
+}
+
+variable "resource_group_name" {
+  description = "Existing Azure resource group"
+  type        = string
+  default     = "myResourceGroup"
+}
+
+variable "location" {
+  description = "Azure deployment region"
+  type        = string
+  default     = "Canada Central"
+}
+
+# Public IP Address
+resource "azurerm_public_ip" "lb_public_ip" {
+  name                = "lb-public-ip"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
+
+# Azure Load Balancer
+resource "azurerm_lb" "main" {
+  name                = "azure-load-balancer"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  sku                 = "Standard"
+
+  frontend_ip_configuration {
+    name                 = "public-frontend"
+    public_ip_address_id = azurerm_public_ip.lb_public_ip.id
+  }
+}
+
+# Backend Address Pool
+resource "azurerm_lb_backend_address_pool" "backend" {
+  name            = "backend-pool"
+  loadbalancer_id = azurerm_lb.main.id
+}
+
+# Health Probe
+resource "azurerm_lb_probe" "http" {
+  name            = "http-health-probe"
+  loadbalancer_id = azurerm_lb.main.id
+  protocol        = "Tcp"
+  port            = 80
+  interval_in_seconds = 5
+  probe_threshold     = 2
+}
+
+# Load Balancing Rule
+resource "azurerm_lb_rule" "http" {
+  name                           = "http-load-balancing-rule"
+  loadbalancer_id                = azurerm_lb.main.id
+  protocol                       = "Tcp"
+  frontend_port                  = 80
+  backend_port                   = 80
+  frontend_ip_configuration_name = "public-frontend"
+  backend_address_pool_ids       = [azurerm_lb_backend_address_pool.backend.id]
+  probe_id                       = azurerm_lb_probe.http.id
+  idle_timeout_in_minutes        = 15
+  enable_tcp_reset               = true
+}
+
+# Outputs
+output "load_balancer_public_ip" {
+  description = "Public IP address of the Azure Load Balancer"
+  value       = azurerm_public_ip.lb_public_ip.ip_address
+}
+
+output "load_balancer_name" {
+  description = "Name of the Azure Load Balancer"
+  value       = azurerm_lb.main.name
+}
+
+output "backend_pool_id" {
+  description = "ID of the backend address pool"
+  value       = azurerm_lb_backend_address_pool.backend.id
+}
+```
