@@ -103,6 +103,7 @@ Following the principle of least privilege helps ensure that identities receive 
 Storage authentication, authorization, and network access restrictions are separate controls and should be documented according to the configuration actually implemented.
 
 **Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-09-26%20085753.png.
+![Image Error](screenshots/Screenshot%202026-09-26%20085753.png)
 
 ### 4. Azure Virtual Machine Scale Sets
 
