@@ -21,7 +21,7 @@ The project includes Azure Virtual Networking, Azure Load Balancer, Azure Storag
 
 The following diagram provides a conceptual overview of the solution.
 
-![Image Error](diagrams/azure-architecture.png.jpg)
+![Image Error](diagrams/diagram01.png)
 
 The architecture illustrates how users can access an application through a load balancer, how virtual machines operate within a virtual network, and how storage access and backup can be managed through separate Azure services.
 
