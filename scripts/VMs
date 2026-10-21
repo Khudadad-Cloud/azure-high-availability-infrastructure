@@ -1,0 +1,76 @@
+```hcl
+# Create Network Interfaces for Three VMs
+
+resource "azurerm_network_interface" "vm_nic" {
+  count               = 3
+  name                = "project-vm-nic-${count.index + 1}"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.backend.id
+    private_ip_address_allocation = "Dynamic"
+  }
+
+  tags = {
+    environment = "development"
+    project     = "azure-infrastructure"
+  }
+}
+
+# Deploy Three Ubuntu Virtual Machines
+
+resource "azurerm_linux_virtual_machine" "vm" {
+  count               = 3
+  name                = "project-vm-${count.index + 1}"
+  computer_name       = "project-vm-${count.index + 1}"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  size                = "Standard_B1s"
+
+  admin_username                  = var.admin_username
+  disable_password_authentication = true
+
+  network_interface_ids = [
+    azurerm_network_interface.vm_nic[count.index].id
+  ]
+
+  admin_ssh_key {
+    username   = var.admin_username
+    public_key = file(var.ssh_public_key_path)
+  }
+
+  os_disk {
+    name                 = "project-vm-os-disk-${count.index + 1}"
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
+    version   = "latest"
+  }
+
+  tags = {
+    environment = "development"
+    project     = "azure-infrastructure"
+  }
+}
+
+# Output VM Names
+
+output "vm_names" {
+  description = "Names of the three deployed virtual machines"
+  value       = azurerm_linux_virtual_machine.vm[*].name
+}
+
+# Output Private IP Addresses
+
+output "vm_private_ips" {
+  description = "Private IP addresses of the three virtual machines"
+  value       = azurerm_network_interface.vm_nic[*].private_ip_address
+}
+```
