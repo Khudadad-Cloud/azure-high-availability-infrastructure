@@ -1,0 +1,54 @@
+```hcl
+# Recovery Services Vault
+
+resource "azurerm_recovery_services_vault" "main" {
+  name                = "project-recovery-vault"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  sku                 = "Standard"
+
+  storage_mode_type = "LocallyRedundant"
+}
+
+# Azure VM Backup Policy
+
+resource "azurerm_backup_policy_vm" "main" {
+  name                = "daily-vm-backup-policy"
+  resource_group_name = var.resource_group_name
+  recovery_vault_name = azurerm_recovery_services_vault.main.name
+
+  timezone = "UTC"
+
+  backup {
+    frequency = "Daily"
+    time      = "23:00"
+  }
+
+  retention_daily {
+    count = 7
+  }
+}
+
+# Protect an Existing Azure Virtual Machine
+
+resource "azurerm_backup_protected_vm" "main" {
+  resource_group_name = var.resource_group_name
+  recovery_vault_name = azurerm_recovery_services_vault.main.name
+  source_vm_id        = var.virtual_machine_id
+  backup_policy_id    = azurerm_backup_policy_vm.main.id
+}
+
+# Output Recovery Services Vault Name
+
+output "recovery_services_vault_name" {
+  description = "Name of the Recovery Services vault"
+  value       = azurerm_recovery_services_vault.main.name
+}
+
+# Output Backup Policy ID
+
+output "backup_policy_id" {
+  description = "ID of the Azure VM backup policy"
+  value       = azurerm_backup_policy_vm.main.id
+}
+```
