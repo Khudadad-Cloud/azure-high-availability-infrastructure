@@ -142,11 +142,9 @@ Successful backup jobs and available recovery points provide evidence that the c
 
 ## Architecture Diagrams
 
-* https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/network-traffic-flow.png.jpg
-* https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/storage-and-backup.png.jpg
 * ![Image Error](diagrams/azure-architecture.png.jpg)
 * ![Image Error](diagrams/network-traffic-flow.png.jpg)
-* * ![Image Error](diagrams/storage-and-backup.png.jpg)
+* ![Image Error](diagrams/storage-and-backup.png.jpg)
 
 ## Screenshots and Evidence
 
@@ -159,31 +157,32 @@ The following screenshots demonstrate the deployment and configuration of the Az
 Shows the Azure virtual network, subnets, and network configuration.
 
 https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/vnet.png
+* ![Image Error](screenshots/vnet.png)
 
 ### 2. Azure Load Balancer
 
 Shows the Azure Load Balancer configuration used to distribute incoming traffic across backend resources.
 
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/loadbalancer.png
+* ![Image Error](screenshots/loadbalancer.png)
 
 ### 3. Azure Storage Access Management
 
 Shows the storage account configuration and access controls used to manage access to Azure Storage.
 
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-09-26%20085753.png
+* ![Image Error](screenshots/Screenshot%202026-09-26%20085753.png)
 
 ### 4. Azure Virtual Machine Scale Sets
 
 Shows the Virtual Machine Scale Set configuration supporting scalability and high availability.
 
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-09-26%20093304.png
+* ![Image Error](screenshots/Screenshot%202026-09-26%20093304.png)
 
 ### 5. Azure Backup
 
 Shows the Azure Backup configuration for protecting virtual machines and supporting recovery.
 
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-10-07%20081211.png
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-10-07%20082419.png
+* ![Image Error](screenshots/Screenshot%202026-10-07%20081211.png)
+* ![Image Error](screenshots/Screenshot%202026-10-07%20082419.png)
 
 
 ## Skills Demonstrated
