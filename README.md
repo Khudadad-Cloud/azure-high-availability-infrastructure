@@ -120,7 +120,7 @@ Virtual Machine Scale Sets support the deployment and management of groups of vi
 
 Availability zones, autoscaling rules, and load-balancing integration should be documented only when configured and verified.
 
-**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-09-26%20093304.png.
+**Evidence:** ![Image Error](screenshots/Screenshot%202026-09-26%20093304.png)
 
 ### 5. Azure Backup
 
@@ -139,7 +139,7 @@ Azure Backup provides data protection for supported Azure workloads. A configure
 
 Successful backup jobs and available recovery points provide evidence that the configured protection workflow is operating as expected.
 
-**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/Screenshot%202026-10-07%20081211.png.
+**Evidence:** ![Image Error](screenshots/Screenshot%202026-10-07%20081211.png)
 
 ## Architecture Diagrams
 
