@@ -80,6 +80,7 @@ Azure Load Balancer distributes network traffic across eligible backend instance
 This helps improve application availability when the backend architecture and health-check configuration are designed appropriately.
 
 https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/loadbalancer.png.
+**Evidence:** ![Image Error](screenshots/loadbalancer.png)
 
 ### 3. Azure Storage Access Management
 
