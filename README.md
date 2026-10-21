@@ -60,8 +60,6 @@ The final architecture should reflect the actual resource configuration document
 
 The virtual network provides network isolation and connectivity for supported Azure resources. Subnets help organize resources, while NSGs control permitted inbound and outbound traffic according to configured security rules.
 
-**Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/vnet.png.
-
 ![Image Error](screenshots/vnet.png)
 
 ### 2. Azure Load Balancer
