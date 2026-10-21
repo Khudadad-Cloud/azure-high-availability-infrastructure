@@ -1,0 +1,22 @@
+```hcl
+# Backend Subnet for Azure Infrastructure
+
+resource "azurerm_subnet" "backend" {
+  name                 = "backend-subnet"
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.main.name
+  address_prefixes     = ["10.0.2.0/24"]
+}
+
+# Output Backend Subnet Details
+
+output "backend_subnet_name" {
+  description = "Name of the backend subnet"
+  value       = azurerm_subnet.backend.name
+}
+
+output "backend_subnet_address_prefix" {
+  description = "Backend subnet address range"
+  value       = azurerm_subnet.backend.address_prefixes
+}
+```
