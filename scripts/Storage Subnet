@@ -1,0 +1,22 @@
+```hcl
+# Storage Subnet for Azure Infrastructure
+
+resource "azurerm_subnet" "storage" {
+  name                 = "storage-subnet"
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = azurerm_virtual_network.main.name
+  address_prefixes     = ["10.0.3.0/24"]
+}
+
+# Output Storage Subnet Details
+
+output "storage_subnet_name" {
+  description = "Name of the storage subnet"
+  value       = azurerm_subnet.storage.name
+}
+
+output "storage_subnet_address_prefix" {
+  description = "Storage subnet address range"
+  value       = azurerm_subnet.storage.address_prefixes
+}
+```
