@@ -62,7 +62,7 @@ The virtual network provides network isolation and connectivity for supported Az
 
 **Evidence:** https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/vnet.png.
 
-![Image Error](screenshots/100417.png)
+![Image Error](screenshots/vnet.png)
 
 ### 2. Azure Load Balancer
 
