@@ -21,6 +21,8 @@ The project includes Azure Virtual Networking, Azure Load Balancer, Azure Storag
 
 The following diagram provides a conceptual overview of the solution.
 
+![Image Error](diagrams/diagram01.png)
+
 The architecture illustrates how users can access an application through a load balancer, how virtual machines operate within a virtual network, and how storage access and backup can be managed through separate Azure services.
 
 The final architecture should reflect the actual resource configuration documented in the screenshots.
@@ -131,47 +133,27 @@ Azure Backup provides data protection for supported Azure workloads. A configure
 Successful backup jobs and available recovery points provide evidence that the configured protection workflow is operating as expected.
 
 
-## Architecture Diagrams
-
-* ![Image Error](diagrams)
-
-## Screenshots and Evidence
-
-## Screenshots
-
-The following screenshots demonstrate the deployment and configuration of the Azure infrastructure components in this project. They provide evidence of the implemented networking, load balancing, storage security, scalability, and backup solutions.
-
 ### 1. Azure Virtual Networking
 
-Shows the Azure virtual network, subnets, and network configuration.
-
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/vnet.png
-* ![Image Error](screenshots/vnet.png)
+Configured an Azure Virtual Network (VNet) with multiple subnets to organize and isolate network resources. Configured Network Security Groups (NSGs) with inbound and outbound security rules to control traffic, assigned IP addresses, and connected virtual machines to the appropriate subnets. Integrated the network with Azure Load Balancer and Virtual Machine Scale Sets (VMSS) to support secure communication, scalability, and high availability.
 
 ### 2. Azure Load Balancer
 
-Shows the Azure Load Balancer configuration used to distribute incoming traffic across backend resources.
-
-* ![Image Error](screenshots/loadbalancer.png)
+Configured an Azure Load Balancer with a frontend IP address, backend pool, health probes, and load-balancing rules to distribute incoming traffic across virtual machine instances. Integrated the backend pool with Azure Virtual Machine Scale Sets (VMSS) and configured health monitoring to route traffic to healthy instances, improving application availability and scalability.
 
 ### 3. Azure Storage Access Management
 
-Shows the storage account configuration and access controls used to manage access to Azure Storage.
+Implemented Azure Storage Access Management using **Azure Storage Accounts, Azure Blob Storage, Microsoft Entra ID, Azure Role-Based Access Control (RBAC), and Managed Identities**. Configured storage resources to securely store and manage data, assigned appropriate roles such as Storage Blob Data Contributor to control access, and applied the principle of least privilege to ensure users and applications had only the permissions they needed. Used Microsoft Entra ID for identity-based authentication and Managed Identities to enable secure access without hardcoded credentials. Verified access permissions to support secure and controlled storage operations.
 
-* ![Image Error](screenshots/Screenshot%202026-09-26%20085753.png)
 
 ### 4. Azure Virtual Machine Scale Sets
 
-Shows the Virtual Machine Scale Set configuration supporting scalability and high availability.
+Implemented Azure Virtual Machine Scale Sets (VMSS) to deploy and manage multiple virtual machine instances for scalable and highly available workloads. Configured the VM Scale Set within an Azure Virtual Network and backend subnet, integrated it with an Azure Load Balancer to distribute incoming traffic, and enabled autoscaling to adjust VM instances based on workload demand.
 
-* ![Image Error](screenshots/Screenshot%202026-09-26%20093304.png)
 
 ### 5. Azure Backup
 
-Shows the Azure Backup configuration for protecting virtual machines and supporting recovery.
-
-* ![Image Error](screenshots/Screenshot%202026-10-07%20081211.png)
-* ![Image Error](screenshots/Screenshot%202026-10-07%20082419.png)
+Configured Azure Backup to protect Azure Virtual Machines by creating a Recovery Services vault, enabling backup policies, and setting up scheduled backups to support data protection and recovery.
 
 
 ## Skills Demonstrated
