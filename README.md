@@ -60,7 +60,7 @@ The final architecture should reflect the actual resource configuration document
 
 The virtual network provides network isolation and connectivity for supported Azure resources. Subnets help organize resources, while NSGs control permitted inbound and outbound traffic according to configured security rules.
 
-![Image Error](screenshots/vnet.png)
+**Evidence:** ![Image Error](screenshots/vnet.png)
 
 ### 2. Azure Load Balancer
 
@@ -79,7 +79,6 @@ Azure Load Balancer distributes network traffic across eligible backend instance
 
 This helps improve application availability when the backend architecture and health-check configuration are designed appropriately.
 
-https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/screenshots/loadbalancer.png.
 **Evidence:** ![Image Error](screenshots/loadbalancer.png)
 
 ### 3. Azure Storage Access Management
@@ -146,6 +145,7 @@ Successful backup jobs and available recovery points provide evidence that the c
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/azure-architecture.png.jpg
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/network-traffic-flow.png.jpg
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/storage-and-backup.png.jpg
+* **Evidence:** ![Image Error](diagrams/azure-architecture.png.jpg)
 
 ## Screenshots and Evidence
 
