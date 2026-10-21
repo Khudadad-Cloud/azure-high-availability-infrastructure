@@ -145,7 +145,7 @@ Successful backup jobs and available recovery points provide evidence that the c
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/azure-architecture.png.jpg
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/network-traffic-flow.png.jpg
 * https://github.com/Khudadad-Cloud/azure-high-availability-infrastructure/blob/main/diagrams/storage-and-backup.png.jpg
-* **Evidence:** ![Image Error](diagrams/azure-architecture.png.jpg)
+* ![Image Error](diagrams/azure-architecture.png.jpg)
 
 ## Screenshots and Evidence
 
